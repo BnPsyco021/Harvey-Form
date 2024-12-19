@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Comanf</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <img src="https://media.discordapp.net/attachments/1313212452821012552/1318942356078067742/4810e501604f87ef7283db65e2eba870.png?ex=676579ca&is=6764284a&hm=51c7db28a6ab1e1e00a8e2dfef330412d76f3cb1782dc5a75b7dee4b637bb9f7&=&format=webp&quality=lossless&width=230&height=230" alt="Logo" class="logo">
+        <div class="title">Form Comanf</div>
+    </div>
+
+    <div class="content">
+        <div class="box">
+            <h2>Coleta de dados</h2>
+            <form action="#" method="POST" id="form">
+                <div class="form-group">
+                    <label for="discord">Seu Discord:</label>
+                    <input type="text" id="discord" name="discord" required>
+                </div>
+                <div class="form-group">
+                    <label for="nomeOCC">Nome (OCC):</label>
+                    <input type="number" id="idadeOCC" name="idadeOCC" required max="55">
+                </div>
+                <div class="form-group">
+                    <label for="nomeRgIC">Nome e RG (IC):</label>
+                    <input type="text" id="nomeRgIC" name="nomeRgIC" required>
+                </div>
+                <div class="form-group">
+                    <label for="idadeIC">Idade (OCC):</label>
+                    <input type="number" id="idadeIC" name="idadeIC" required>
+                </div>
+                <div class="form-group">
+                    <label for="prisoes">Quantas Prisoes Tomou (IC):</label>
+                    <input type="number" id="prisoes" name="prisoes" required>
+                </div>
+                <div class="form-group">
+                    <label for="porteArma">Possui Porte de Arma (IC):</label>
+                    <select id="porteArma" name="porteArma" required>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Nao</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cnh">Possui CNH 'A e B' (IC):</label>
+                    <select id="cnh" name="cnh" required>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Nao</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="plataforma">PC ou Mobile:</label>
+                    <select id="plataforma" name="plataforma" required>
+                        <option value="pc">PC</option>
+                        <option value="mobile">Mobile</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="submitBtn" disabled>Enviar</button>
+                </div>
+            </form>
+
+            <div id="successMessage" class="success-message">
+                Formulário enviado com sucesso!
+            </div>
+
+            <div id="timer" class="timer"></div>
+            <div id="waitMessage" class="wait-message" style="display: none;">Aguarde, tempo para enviar novamente.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
